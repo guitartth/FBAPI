@@ -8,6 +8,6 @@ public class GamesContext : DbContext
     {
     }
 
-    public DbSet<Games> Games { get; set; } = null;
+    public DbSet<Game> Games { get; set; } = null;
 
 }

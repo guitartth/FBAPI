@@ -20,9 +20,9 @@ namespace API_FB.Controllers
             _context = context;
         }
 
-        // GET: api/Games
+        // GET: api/Game
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Games>>> GetGames()
+        public async Task<ActionResult<IEnumerable<Game>>> GetGames()
         {
           if (_context.Games == null)
           {
@@ -31,9 +31,9 @@ namespace API_FB.Controllers
             return await _context.Games.ToListAsync();
         }
 
-        // GET: api/Games/5
+        // GET: api/Game/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Games>> GetGames(int id)
+        public async Task<ActionResult<Game>> GetGames(int id)
         {
           if (_context.Games == null)
           {
@@ -49,12 +49,12 @@ namespace API_FB.Controllers
             return games;
         }
 
-        // PUT: api/Games/5
+        // PUT: api/Game/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutGames(int id, Games games)
+        public async Task<IActionResult> PutGames(int id, Game games)
         {
-            if (id != games.Id)
+            if (id != games.GameID)
             {
                 return BadRequest();
             }
@@ -80,10 +80,10 @@ namespace API_FB.Controllers
             return NoContent();
         }
 
-        // POST: api/Games
+        // POST: api/Game
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Games>> PostGames(Games games)
+        public async Task<ActionResult<Game>> PostGames(Game games)
         {
           if (_context.Games == null)
           {
@@ -92,10 +92,10 @@ namespace API_FB.Controllers
             _context.Games.Add(games);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetGames", new { id = games.Id }, games);
+            return CreatedAtAction("GetGames", new { id = games.GameID }, games);
         }
 
-        // DELETE: api/Games/5
+        // DELETE: api/Game/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteGames(int id)
         {
@@ -117,7 +117,7 @@ namespace API_FB.Controllers
 
         private bool GamesExists(int id)
         {
-            return (_context.Games?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Games?.Any(e => e.GameID == id)).GetValueOrDefault();
         }
     }
 }

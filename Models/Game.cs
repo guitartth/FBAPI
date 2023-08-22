@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace API_FB.Models;
 
-public class Games
+public class Game
 {
 
     [Key]
-    public int Id { get; set; }
+    public int GameID { get; set; }
     
     public int HomeTeamId { get; set; }
 
@@ -17,8 +17,8 @@ public class Games
 
     public int Week { get; set; }
 
-    public string GameDate { get; set; }
+    public DateTime GameDate { get; set; }
 
-    public string GameTime { get; set; }
+    public DateTime GameTime { get; set; }
 
 }
