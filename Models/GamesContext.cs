@@ -10,4 +10,6 @@ public class GamesContext : DbContext
 
     public DbSet<Game> Games { get; set; } = null;
 
+    //public int Week { get; set; }
+
 }

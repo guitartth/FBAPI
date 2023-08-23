@@ -15,7 +15,7 @@ builder.Services.AddDbContext<GamesContext>(options =>
 {
     options.UseMySql(connString, ServerVersion.AutoDetect(connString));
 });
-    
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -49,6 +49,24 @@ namespace API_FB.Controllers
             return games;
         }
 
+        // GET: api/Games
+        [HttpGet("/api/Week={Week=}")]
+        public async Task<ActionResult<Game>> GetGamesByWeek(int Week)
+        {
+            if (_context.Games == null)
+            {
+                return NotFound();
+            }
+            var games = await _context.Games.FirstOrDefaultAsync(games => games.Week == Week);
+                
+            if (games == null)
+            {
+                return NotFound();
+            }
+
+            return games;
+        }
+
         // PUT: api/Game/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -79,6 +97,7 @@ namespace API_FB.Controllers
 
             return NoContent();
         }
+
 
         // POST: api/Game
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
