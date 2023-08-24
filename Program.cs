@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using API_FB.Models;
-
+using API_FB.Models.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +11,21 @@ var connString = builder.Configuration.GetConnectionString("default");
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddDbContext<GamesContext>(options =>
+{
+    options.UseMySql(connString, ServerVersion.AutoDetect(connString));
+});
+
+builder.Services.AddDbContext<TeamsContext>(options =>
+{
+    options.UseMySql(connString, ServerVersion.AutoDetect(connString));
+});
+
+builder.Services.AddDbContext<ResultsContext>(options =>
+{
+    options.UseMySql(connString, ServerVersion.AutoDetect(connString));
+});
+
+builder.Services.AddDbContext<PicksContext>(options =>
 {
     options.UseMySql(connString, ServerVersion.AutoDetect(connString));
 });

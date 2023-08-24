@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_FB", "API_FB.csproj", "{92CEE1B9-4451-4758-B403-DD091346E493}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WA_FB", "..\WA_FB\WA_FB.csproj", "{4C09544F-C776-4C68-96EA-C4EA05B97B68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{92CEE1B9-4451-4758-B403-DD091346E493}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92CEE1B9-4451-4758-B403-DD091346E493}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92CEE1B9-4451-4758-B403-DD091346E493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C09544F-C776-4C68-96EA-C4EA05B97B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C09544F-C776-4C68-96EA-C4EA05B97B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C09544F-C776-4C68-96EA-C4EA05B97B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C09544F-C776-4C68-96EA-C4EA05B97B68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

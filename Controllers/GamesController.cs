@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using API_FB.Models;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.ComponentModel.Design;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using API_FB.Models.Contexts;
 
 namespace API_FB.Controllers
 {
@@ -50,15 +54,36 @@ namespace API_FB.Controllers
         }
 
         // GET: api/Games
-        [HttpGet("/api/Week={Week=}")]
-        public async Task<ActionResult<Game>> GetGamesByWeek(int Week)
+        [HttpGet("/api/Games/Week={Week}")]
+        public async Task<ActionResult<List<Game>>> GetGamesByWeek(int Week)
         {
             if (_context.Games == null)
             {
                 return NotFound();
             }
-            var games = await _context.Games.FirstOrDefaultAsync(games => games.Week == Week);
-                
+
+            var games = await _context.Games.Where(i => i.Week == Week).ToListAsync();
+            
+            if (games == null)
+            {
+                return NotFound();
+            }
+
+            return games;  
+        }
+
+        // EXAMPLE OF MULTIPLE FIELDS BEING FILTERED IN QUERY!!!!
+        // GET: api/Games
+        [HttpGet("/api/Games/Week={Week}/HomeSpread={HomeSpread}")]
+        public async Task<ActionResult<List<Game>>> GetGamesByWeekAndSpread(int Week, float HomeSpread)
+        {
+            if (_context.Games == null)
+            {
+                return NotFound();
+            }
+
+            var games = await _context.Games.Where(i => (i.Week == Week && i.HomeSpread == HomeSpread)).ToListAsync();
+
             if (games == null)
             {
                 return NotFound();
