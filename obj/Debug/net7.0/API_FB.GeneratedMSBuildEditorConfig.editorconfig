@@ -15,3 +15,47 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\dev\API_FB
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/dev/API_FB/Front/App.razor]
+build_metadata.AdditionalFiles.TargetPath = RnJvbnRcQXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/API_FB/Front/Pages/Authentication.razor]
+build_metadata.AdditionalFiles.TargetPath = RnJvbnRcUGFnZXNcQXV0aGVudGljYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/API_FB/Front/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = RnJvbnRcUGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/API_FB/Front/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = RnJvbnRcUGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/API_FB/Front/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = RnJvbnRcUGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/API_FB/Front/Shared/LoginDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = RnJvbnRcU2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/API_FB/Front/Shared/RedirectToLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = RnJvbnRcU2hhcmVkXFJlZGlyZWN0VG9Mb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/API_FB/Front/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = RnJvbnRcU2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/API_FB/Front/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = RnJvbnRcX0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/API_FB/Front/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = RnJvbnRcU2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-oupqzjvxz2
+
+[C:/dev/API_FB/Front/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = RnJvbnRcU2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-hkg6mjrr4i
